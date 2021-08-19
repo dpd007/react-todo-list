@@ -26,7 +26,7 @@ const Todo = ({ lists, addToList }) => {
           save
         </button>
       </form>
-      <Card list={lists} />
+      {lists.map(list => <Card key={list.id} id={list.id} text={list.text} />)}
     </div>
   );
 };

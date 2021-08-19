@@ -1,12 +1,10 @@
 import "./Card.css";
-const Card = ({ list }) => {
+const Card = ({ key, id, text }) => {
   return (
     <div>
-      {list.map((list) => (
-        <div className="card" key={list.id}>
-          <div className="card__text">{list.text}</div>
-        </div>
-      ))}
+      <div className="card" key={id} id={id}>
+        <div className="card__text">{text}</div>
+      </div>
     </div>
   );
 };
